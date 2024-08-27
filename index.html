@@ -7,22 +7,27 @@
   <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="Todo.css">
   <title>Personal Task Manager</title>
-
 </head>
 
 <body>
   <div class="open">
-
     <h2>Todo List</h2>
     <div class="holder">
       <input type="text" placeholder="Add Your Todo Here" class="NameInput" />
       <input type="date" class="DateInput Timei" />
       <button class="AddOn" onclick="Addtodo();">ADD</button>
     </div>
-    <div class="container"></div>
+    <div class="container">
+      <!-- Todo items will go here -->
+    </div>
     <div class="close">&nbsp;</div>
     <div class="open-clo">&nbsp;</div>
   </div>
+
+  <div id="footer"> 
+    <p>Created by Prashant | &copy; 2024 All Rights Reserved</p>
+  </div>
+
   <script src="Todo.js"></script>
 </body>
 

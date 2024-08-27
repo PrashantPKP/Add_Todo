@@ -1,96 +1,129 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
-    font-family: cursive;
-    background-color: lightgoldenrodyellow;
+    font-family: 'Arial', sans-serif;
+    /* background-color: lightgoldenrodyellow; */
+    background: rgb(240,81,18);
+    background: linear-gradient(90deg, rgba(240,81,18,1) 0%, rgba(242,255,18,0.8939950980392157) 46%, rgba(0,255,51,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.holder {
-    display: grid;
-    grid-template-columns: 200px 150px 100px;
-    column-gap: 10px;
-    row-gap: 10px;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.container {
-    background-color: rgb(56, 105, 197);
-    display: grid;
-    grid-template-columns: 100px 500px 150px 100px;
-    column-gap: 10px;
-    row-gap: 10px;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    max-width: 49vw;
-    margin: 0px auto;
-
-}
-
-.holder {
-    margin-bottom: 10px;
-    padding-bottom: 9px;
-}
-
-.AddOn {
-    padding: 10px;
-    background-color: green;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-}
-
-.DeleteItem {
-    padding: 10px;
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-}
-
-.NameInput,
-.Timei {
-    /* padding-left: 12px; */
-    padding: 10px;
-    font-weight: bolder;
-    border: 2px solid rgb(93, 76, 76);
+.open {
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255,0.5);
+    max-width: 55vw;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     display: flex;
     justify-content: center;
     padding: 13px;
+    font-weight: bold;
+    color: #2c3e50;
 }
 
-.open {
+.holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.NameInput, .Timei {
+    padding: 10px;
+    font-weight: bolder;
+    border: 2px solid rgb(93, 76, 76);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.AddOn {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.AddOn:hover {
+    background-color: darkgreen;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between tasks */
+    /* background-color: #3498db; */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container > div {
+    background-color: #e1ebf2;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.DeleteItem {
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.DeleteItem:hover {
+    background-color: darkred;
+}
+
+#footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #133f5c;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
     
-    background-color: aquamarine;
+    margin-top: auto;
+    margin-bottom: 0px; 
+
+#footer p {
+    margin: 0;
+}
+
+.close, .open-clo {
+
     max-width: 55vw;
-    margin: 0px auto;
+    margin: 0 auto;
     height: 100%;
- z-index: 2;
-
-}
-
-.close {
-    background-color: aquamarine;
-    max-width: 55vw;
-    margin: 0px auto;
     z-index: 2;
-
-}
-.open-clo{
-    background-color: aquamarine;
-    margin: 0px auto;
-    position: fixed;
-    z-index: 0;
-    height: 100vh;
-    width: 55vw;
 }
